@@ -1,0 +1,26 @@
+#############################################################
+## R code to reproduce statistical analysis in the textbook:
+## Agresti, Franklin, Klingenberg
+## Statistics: The Art & Science of Learning from Data
+## 4th Edition, Pearson 2017
+## Web: ArtofStat.com
+## Copyright: Bernhard Klingenberg
+############################################################
+
+###################
+###  Chapter 2  ###
+###  Example 10 ###
+###################
+
+######################
+## Mean and Median  ##
+######################
+
+# Read in Sodium values:
+Sodium <- c(0, 340, 70, 140, 200, 180, 210, 150, 100, 130, 140, 180, 190, 160,290, 50, 220, 180, 200, 210)
+
+# To find the Mean:
+mean(Sodium)
+
+# To find the Median:
+median(Sodium)
