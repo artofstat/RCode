@@ -17,20 +17,37 @@
 #####################
 
 # Reading in values from file:
-Heights <- read.csv(file='http://www.artofstats.com/data/chapter2/heights.csv')
+student_heights <- read.csv(file='http://www.artofstats.com/data/chapter2/heights.csv')
+attach(student_heights)
 
 # The original dataset contains height measurements for men and women 
-# To filter out the height measurements for men and omit the height of 92 inches, you can use `filter()` from the dplyr package
-# To install the dplyr package, type install.packages('dplyr')
-library(dplyr)
-Heights = Heights %>% filter(GENDER == 'Female', HEIGHT != 92)
-attach(Heights) # so we can refer to variable names
+# You can use the `subset()` function to filter out height measurements for men and omit the measurement of 92 inches
+heights_women <- subset(HEIGHT, GENDER == 'Female' & HEIGHT != 92)
+
+# Sample Size
+length(heights_women)
+
+# Mean
+mean(heights_women)
+
+# Standard Deviation
+sd(heights_women)
+
+# 5 Number Summary
+summary(heights_women) 
+
+# Basic  Histogram 
+hist <- hist(heights_women, breaks = 30,
+             main = 'Histogram of Female Student Heights',
+             xlab = 'Height (in)',
+             ylab = 'Percent (%)')
 
 # Creating Histogram using ggplot2
-# To install the ggplot2 library, type install.packages('ggplot2')
 library(ggplot2)
-ggplot(Heights, aes(x=HEIGHT, y=100*(..count../sum(..count..)))) + 
-  geom_histogram(center=0, binwidth=1, color="black", fill="orchid") +
+ggplot(data.frame(heights_women), 
+       aes(x=heights_women, 
+           y=100*(..count../sum(..count..)))) + 
+  geom_histogram(center=0, binwidth=1, color="black", fill="tan") +
   labs(x="Height (in)", y="Percent (%)",  
        title="Histogram of Female Student Heights") +
   theme_bw() +
