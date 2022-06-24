@@ -17,12 +17,12 @@
 #########################
 
 # Read in values:
-Men <- c(0, 0, 0, 2, 4, 4, 4)
-Women <- c(0, 2, 2, 2, 2, 2, 4)
+men <- c(0, 0, 0, 2, 4, 4, 4)
+women <- c(0, 2, 2, 2, 2, 2, 4)
 
 # Dotplot for values for men
 library(ggplot2)
-ggplot(data.frame(Men), aes(x=Men)) + 
+ggplot(data.frame(men), aes(x = men)) + 
   geom_dotplot() +
   labs(x = '',
        title = 'Dotplot', subtitle = 'Men') +
@@ -34,8 +34,7 @@ ggplot(data.frame(Men), aes(x=Men)) +
   )
 
 # Dotplot for values for women
-library(ggplot2)
-ggplot(data.frame(Women), aes(x=Women)) + 
+ggplot(data.frame(women), aes(x = women)) + 
   geom_dotplot() +
   labs(x = '',
        title = 'Dotplot', subtitle = 'Women') +
@@ -47,6 +46,6 @@ ggplot(data.frame(Women), aes(x=Women)) +
   )
 
 # To find the Standard Deviation
-sd(Men)
-sd(Women)
+sd(men)
+sd(women)
 

@@ -45,12 +45,14 @@ hist <- hist(heights_women, breaks = 30,
 # Creating Histogram using ggplot2
 library(ggplot2)
 ggplot(data.frame(heights_women), 
-       aes(x=heights_women, 
-           y=100*(..count../sum(..count..)))) + 
-  geom_histogram(center=0, binwidth=1, color="black", fill="tan") +
-  labs(x="Height (in)", y="Percent (%)",  
-       title="Histogram of Female Student Heights") +
+       aes(x = heights_women, 
+           y = 100 * (..count.. / sum(..count..)))) + 
+  geom_histogram(center = 0, binwidth = 1, color = 'black', fill = 'tan') +
+  labs(x = 'Height (in)', y = 'Percent (%)',  
+       title = 'Histogram of Female Student Heights') +
   theme_bw() +
-  scale_y_continuous(limits=c(0,20), breaks=seq(0,16,4), expand=c(0,0)) +
-  scale_x_continuous(breaks=seq(56,78,2)) +
-  theme(panel.grid.major.x=element_blank(), panel.grid.minor.x=element_blank())
+  scale_y_continuous(limits = c(0,20), breaks = seq(0,16,4), expand = c(0,0)) +
+  scale_x_continuous(breaks = seq(56,78,2)) +
+  theme(panel.grid.major.x = element_blank(), 
+        panel.grid.minor.x = element_blank()
+        )

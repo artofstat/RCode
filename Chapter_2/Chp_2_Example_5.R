@@ -17,10 +17,10 @@
 ######################
 
 # Read in Sodium values:
-Sodium <- c(0, 340, 70, 140, 200, 180, 210, 150, 100, 130, 140, 180, 190, 160,290, 50, 220, 180, 200, 210)
+sodium <- c(0, 340, 70, 140, 200, 180, 210, 150, 100, 130, 140, 180, 190, 160,290, 50, 220, 180, 200, 210)
 
 # Basic Stem & Leaf Plot:
-stem(Sodium)
+stem(sodium)
 
 # More appropriate (the one from the book):
-stem(Sodium, scale=10)
+stem(sodium, scale=10)

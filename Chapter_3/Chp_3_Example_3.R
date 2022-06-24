@@ -18,27 +18,27 @@
 
 # Reading in the data:
 counts <- c(29, 98, 19485, 7086)
-pesticide <- matrix(counts, nrow=2, ncol=2, byrow=TRUE, 
-                    dimnames=list('Food Type' = c('Organic', 'Conventional'), 
-                                  'Pesticides'= c('Present', 'Absent')))
+pesticide <- matrix(counts, nrow = 2 , ncol = 2, byrow = TRUE, 
+                    dimnames = list('Food Type' = c('Organic', 'Conventional'), 
+                                    'Pesticides'= c('Present', 'Absent')))
 
 # To find the conditional proportions for pesticide status
 cond.props <- prop.table(pesticide, 1)
 
 # Bar graph of conditional proportions on pesticide status for organic foods
 barplot(cond.props[1,], xlab='Pesticide', ylab='Proportion', ylim=c(0,1), 
-        main= 'Organic Foods', 
-        col=c('green4', 'darkseagreen'))
+        main = 'Organic Foods', 
+        col = c('green4', 'darkseagreen'))
 
 # Bar graph of conditional proportions on pesticide status for conventionally foods
 barplot(cond.props[2,], xlab='Food Type', ylab='Proportion', ylim=c(0,1), 
-        main= 'Conventionally Grown Foods', 
-        col=c('orange2', 'antiquewhite2'))
+        main = 'Conventionally Grown Foods', 
+        col = c('orange2', 'antiquewhite2'))
 
 # Bar graph of proportion of food samples with pesticide present
-barplot(cond.props[,1], xlab='Food Type', ylab='Proportion', ylim=c(0,1), 
-        main= 'Proportion of Food samples \n with Pesticide Present', 
-        col=c('green4', 'orange2'))
+barplot(cond.props[,1], xlab = 'Food Type', ylab = 'Proportion', ylim = c(0,1), 
+        main = 'Proportion of Food samples \n with Pesticide Present', 
+        col = c('green4', 'orange2'))
 
 
 

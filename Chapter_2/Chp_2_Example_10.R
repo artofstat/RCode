@@ -16,11 +16,11 @@
 ## Mean and Median  ##
 ######################
 
-# Read in Sodium values:
-Sodium <- c(0, 340, 70, 140, 200, 180, 210, 150, 100, 130, 140, 180, 190, 160,290, 50, 220, 180, 200, 210)
+# Read in sodium values:
+sodium <- c(0, 340, 70, 140, 200, 180, 210, 150, 100, 130, 140, 180, 190, 160,290, 50, 220, 180, 200, 210)
 
 # To find the Mean:
-mean(Sodium)
+mean(sodium)
 
 # To find the Median:
-median(Sodium)
+median(sodium)
