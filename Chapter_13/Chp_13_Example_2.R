@@ -1,3 +1,4 @@
+############################################################
 ## R code to accompany the textbook
 ## Statistics: The Art & Science of Learning from Data
 ## by A. Agresti, C. Franklin and B. Klingenberg
@@ -16,7 +17,7 @@
 ##########################
 
 # Reading in data
-data <- read.csv(file='https://img1.wsimg.com/blobby/go/bbca5dba-4947-4587-b40a-db346c01b1b3/downloads/house_selling_prices_OR.csv?ver=1657874961384')
+data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/house_selling_prices_or.csv')
 colnames(data) #check column names
 
 # Fitting in multiple regression model
