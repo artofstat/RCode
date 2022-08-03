@@ -1,3 +1,5 @@
+#############################################################
+## R code to accompany the textbook
 ## Statistics: The Art & Science of Learning from Data
 ## by A. Agresti, C. Franklin and B. Klingenberg
 ## 5th Edition, Pearson 2021
