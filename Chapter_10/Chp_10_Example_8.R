@@ -17,11 +17,12 @@
 ################################################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter10/text_and_graph.csv')
+effectiveness <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter10/text_and_graph.csv')
 
 # To subset data to make the two groups
-text_and_graph <- subset(data, Graph == 'Yes')
-text_only <- subset(data, Graph == 'No')
+textAndGraph <- subset(effectiveness, Graph == 'Yes')
+textOnly <- subset(effectiveness, Graph == 'No')
 
 # To find a 95% confidence interval for the difference of two means
-t.test(text_and_graph$Rating, text_only$Rating, conf.level = 0.95)
+t.test(textAndGraph$Rating, textOnly$Rating, conf.level = 0.95)
+

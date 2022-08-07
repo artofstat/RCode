@@ -22,26 +22,26 @@ prop.test(c(5, 154), c(88, 619), correct = FALSE)
 # Alternatively, you can also make the manual computations to verify the output from the R command above
 
 # Reading in the data 
-x_1 <- 5
-n_1 <- 88
-x_2 <- 154
-n_2 <- 619
+x1 <- 5
+n1 <- 88
+x2 <- 154
+n2 <- 619
 
 # To compute the sample proportions
-phat_1 <- x_1 / n_1
-phat_2 <- x_2 / n_2
+phat1 <- x1 / n1
+phat2 <- x2 / n2
 
 # Setting null hypothesis
-p_0 <- 0
+p0 <- 0
 
 # Computing pooled estimate of the common proportion p under the null hypothesis
-phat <- (x_1 + x_2) / (n_1 + n_2)
+phat <- (x1 + x2) / (n1 + n2)
 
 # To compute the standard error for the test
-se_0 <- sqrt(phat * (1 - phat) * ((1 / n_1) + (1 / n_2)))
+se0 <- sqrt(phat * (1 - phat) * ((1 / n1) + (1 / n2)))
 
 # To find the test statistic
-z <- ((phat_1 - phat_2) - p_0) / se_0
+z <- ((phat1 - phat2) - p0) / se0
 
 # To compute the p value of the two sided hypothesis test
 2 * pnorm(z)

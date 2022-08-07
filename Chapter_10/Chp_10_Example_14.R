@@ -17,9 +17,9 @@
 ###############################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter10/paired_reaction_times.csv')
+reactionTimesPaired <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter10/paired_reaction_times.csv')
 
 # To compare the means for two dependent samples, you can add the `paired = TRUE` 
 # as another argument for the `t.test()` function
-t.test(data$Yes, data$No, paired = TRUE)
+t.test(reactionTimesPaired$Yes, reactionTimesPaired$No, paired = TRUE)
 

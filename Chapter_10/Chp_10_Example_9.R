@@ -17,11 +17,11 @@
 ###########################################
 
 # Reading in the data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter10/cell_phone_reaction_times_long.csv')
+cellPhoneReactions <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter10/cell_phone_reaction_times_long.csv')
 
 # To subset data to make the two groups
-cell <- subset(data, Group == 'Cell')
-control <- subset(data, Group == 'Control')
+cell <- subset(cellPhoneReactions, Group == 'Cell')
+control <- subset(cellPhoneReactions, Group == 'Control')
 
 # To make a hypothesis test comparing the two means 
 t.test(cell$ReactionTime, control$ReactionTime)

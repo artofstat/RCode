@@ -17,20 +17,20 @@
 ###############################################################
 
 # Reading in data for the first proportion
-x_1 <- 347
-n_1 <- 11535
-phat_1 <- x_1 / n_1
+x1 <- 347
+n1 <- 11535
+phat1 <- x1 / n1
 
 # Reading in data for the second proportion
-x_2 <- 327
-n_2 <- 14035
-phat_2 <- x_2 / n_2
+x2 <- 327
+n2 <- 14035
+phat2 <- x2 / n2
 
 # To compute the mean of the difference
-mean <- phat_1 - phat_2
+mean <- phat1 - phat2
 
 # To compute the standard error of the difference
-se <- sqrt((phat_1 * (1 - phat_1) / n_2) + (phat_2 * (1 - phat_2) / n_2))
+se <- sqrt((phat1 * (1 - phat1) / n1) + (phat2 * (1 - phat2) / n2))
 
 # To find the zscore for a 95% confidence interval
 zscore <- qnorm(0.975)

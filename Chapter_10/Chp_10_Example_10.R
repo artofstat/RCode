@@ -17,12 +17,12 @@
 ##################################################################
 
 # Reading in the data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter10/bank_loan_amounts_term.csv')
+bankLoans <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter10/bank_loan_amounts_term.csv')
 
 # To generate 10,000 bootstrap samples and find each sample's difference between two means
 bootmed_diff <- c() # initializing
 for (i in 1:10000) {
-  bootsample <- data[sample(seq_len(nrow(data)), replace = TRUE), ]
+  bootsample <- bankLoans[sample(seq_len(nrow(bankLoans)), replace = TRUE), ]
   years5 <- subset(bootsample, term == 5)
   years3 <- subset(bootsample, term == 3)
   bootmed_diff[i] <- median(years5$loan) - median(years3$loan)

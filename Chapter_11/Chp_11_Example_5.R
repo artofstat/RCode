@@ -17,8 +17,8 @@
 #########################
 
 # Reading in data
-data <- read.csv(file='https://img1.wsimg.com/blobby/go/bbca5dba-4947-4587-b40a-db346c01b1b3/downloads/HeadacheRaw.csv?ver=1657293808775')
-attach(data) # so we can refer to variable names
+headaches <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter11/headache_raw.csv')
+attach(headaches) # so we can refer to variable names
 
 # To make a table from the raw data
 mytable <- table(drug, outcome)
