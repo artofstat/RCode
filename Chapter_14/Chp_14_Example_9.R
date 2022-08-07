@@ -17,12 +17,12 @@
 ##############################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter14/corn_yield.csv')
+corn <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter14/corn_yield.csv')
 head(data, 3)
 
 # Fitting in regression model
-lin.reg <- lm(yield ~ fertilizer + manure, data = data)
+linReg <- lm(yield ~ fertilizer + manure, data = corn)
 
 # To get the two-way ANOVA 
-aov <- anova(lin.reg)
-round(aov, 3)
+aov <- anova(linReg)
+aov

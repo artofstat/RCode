@@ -17,15 +17,15 @@
 #################################################
 
 # Reading in data:
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter15/reaction_time_long.csv')
-head(data)
+reactionTimes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter15/reaction_time_long.csv')
+head(reactionTimes)
 
 # To assign ranks to the values
-data$Rank <- rank(data$response)
+reactionTimes$Rank <- rank(reactionTimes$response)
 
 # To subset the data
-phone_ranks <- subset(data, group == 'phone')$Rank
-control_ranks <- subset(data, group == 'control')$Rank
+phoneRanks <- subset(reactionTimes, group == 'phone')$Rank
+controlRanks <- subset(reactionTimes, group == 'control')$Rank
 
 # To perform a Wilcoxon test
-wilcox.test(phone_ranks, control_ranks)
+wilcox.test(phoneRanks, controlRanks)
