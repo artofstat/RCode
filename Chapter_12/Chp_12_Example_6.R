@@ -17,11 +17,11 @@
 #############################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
 colnames(data) #check column names
 
 # Fitting regression model
-lin.reg <- lm(maxBP..lbs. ~ BP60, data = data)
+linReg <- lm(maxBP..lbs. ~ BP60, data = athletes)
 
 # To compute a 95% confidence interval for the slope, you can use the `confint()` function
-confint(lin.reg, 'BP60', level = 0.95)
+confint(linReg, 'BP60', level = 0.95)

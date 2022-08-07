@@ -17,17 +17,17 @@
 ##########################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/house_selling_prices_or.csv')
+houses <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/house_selling_prices_or.csv')
 
 # Fitting in multiple regression model
-lin.reg <- lm(HP.in.thousands ~ House.Size + Bedrooms, data = data)
-lin.reg
+linReg <- lm(HP.in.thousands ~ House.Size + Bedrooms, data = houses)
+linReg
 
 # To obtain standardized residuals
-stdres <- rstandard(lin.reg)
+mtstdres <- rstandard(linReg)
 
 # To create a histogram of the standardized residuals
-hist(stdres, breaks = 20, col = 'tan', main = 'Histogram',
+hist(mtstdres, breaks = 20, col = 'tan', main = 'Histogram',
      xlab = 'Standardized Residual', ylab = 'Frequency')
 axis(1, at = seq(-5, 6, by = 1))
 

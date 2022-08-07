@@ -17,15 +17,16 @@
 #####################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
-colnames(data) #check column names
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
+colnames(athletes) #check column names
 
 # Fitting regression model
-lin.reg <- lm(maxBP..lbs. ~ BP60, data = data)
+linReg <- lm(maxBP..lbs. ~ BP60, data = athletes)
 
 # To view the coefficients of the regression model
-lin.reg$coefficients
+linReg$coefficients
 
 # To predict max bench press for highest and lowest levels of number of 60 pound bench presses
 new <- data.frame(BP60 = c(2, 35))
-predict(lin.reg, newdata = new)
+predict(linReg, newdata = new)
+

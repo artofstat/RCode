@@ -17,18 +17,18 @@
 ##################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
-colnames(data) #check column names
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
+colnames(athletes) #check column names
 
 # Fitting regression model
-lin.reg <- lm(maxBP..lbs. ~ BP60, data = data)
+linReg <- lm(maxBP..lbs. ~ BP60, data = athletes)
 
 # To obtain residual sum of squares
-rss <- sum(lin.reg$residuals ** 2)
-rrs
+rss <- sum(linReg$residuals ** 2)
+rss
 
 # To find total number of observations in the dataset
-n <- length(lin.reg$residuals)
+n <- length(linReg$residuals)
 n
 
 # To compute residual standard deviation

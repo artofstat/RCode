@@ -17,18 +17,18 @@
 ##########################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
-colnames(data) #check column names
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
+colnames(athletes) #check column names
 
 # Fitting regression model
-lin.reg <- lm(maxBP..lbs. ~ BP60, data = data)
+linReg <- lm(maxBP..lbs. ~ BP60, data = athletes)
 
 # To find a 95% confidence for the population mean for x = 11
-predict(lin.reg, newdata = data.frame(BP60 = 11), 
+predict(linReg, newdata = data.frame(BP60 = 11), 
         interval='confidence', se.fit = TRUE)
 
 # To find a 95% prediction interval for a single observation of x = 11
-predict(lin.reg, newdata = data.frame(BP60=11), 
+predict(linReg, newdata = data.frame(BP60=11), 
         interval='prediction')
 
 

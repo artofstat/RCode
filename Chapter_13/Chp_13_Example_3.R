@@ -17,29 +17,29 @@
 #####################################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/house_selling_prices_or.csv')
-colnames(data) #check column names
+houses <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/house_selling_prices_or.csv')
+colnames(houses) #check column names
 
 # Fitting in multiple regression model
-lin.reg <- lm(HP.in.thousands ~ House.Size + Bedrooms, data = data)
-lin.reg
+linReg <- lm(HP.in.thousands ~ House.Size + Bedrooms, data = houses)
+linReg
 
 # To get the ANOVA table for the regression model
-aov <- anova(lin.reg)
+aov <- anova(linReg)
 aov
 
 # To compute R squared using sum of squares
 tss <- sum(aov$`Sum Sq`)
 rss <- aov$`Sum Sq`[3]
-r_squared <- (tss - rss) / tss
-r_squared
+rSquared <- (tss - rss) / tss
+rSquared
 
 # To find the multiple correlation coefficient
-r <- sqrt(r_squared)
+r <- sqrt(rSquared)
 r
 
 # To verify that the output for R Squared is correct using the manual computation, 
 # you can use the `summary()` function on our model; the R squared is shown there as well
-summary(lin.reg)
+summary(linReg)
 
 

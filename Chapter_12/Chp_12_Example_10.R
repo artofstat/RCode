@@ -17,18 +17,17 @@
 #########################################
 
 # Reading in data
-data <- read.csv(file='https://img1.wsimg.com/blobby/go/bbca5dba-4947-4587-b40a-db346c01b1b3/downloads/High_School_Female_Athletes_Strength.csv?ver=1657874961226')
-colnames(data) # check column names
-attach(data) # so we can refer to variable names
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
+attach(athletes) # so we can refer to variable names
 
 # To obtain correlation between maxBP and BP60
 r <- cor(maxBP..lbs., BP60)
-r_squared <- r ** 2
-r_squared
+rSquared <- r ** 2
+rSquared
 
 # Alternatively, you can fit a regression and check the summary
-lin.reg <- lm(maxBP..lbs. ~ BP60, data = data)
-summary(lin.reg)$r.squared
+linReg <- lm(maxBP..lbs. ~ BP60, data = athletes)
+summary(linReg)$r.squared
 
 
 

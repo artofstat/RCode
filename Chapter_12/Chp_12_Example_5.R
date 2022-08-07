@@ -17,15 +17,15 @@
 ###############################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
-colnames(data) #check column names
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
+colnames(athletes) #check column names
 
 # Fitting regression model
-lin.reg <- lm(maxBP..lbs. ~ BP60, data = data)
+linReg <- lm(maxBP..lbs. ~ BP60, data = athletes)
 
 # To view a summary of the regression model which includes the t-statistic and corresponding p-value
 # for the null hypothesis that the slope for BP60 = 0
-summary(lin.reg)
+summary(linReg)
 
 
 

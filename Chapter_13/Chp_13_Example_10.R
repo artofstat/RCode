@@ -17,9 +17,9 @@
 ##########################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/house_selling_prices_or.csv')
-colnames(data) #check column names
+houses <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/house_selling_prices_or.csv')
+colnames(houses) #check column names
 
 # Fitting in multiple regression model
-lin.reg <- lm(House.Price..USD.~ House.Size + Condition, data = data)
-summary(lin.reg)
+linReg <- lm(House.Price..USD.~ House.Size + Condition, data = houses)
+summary(linReg)

@@ -17,13 +17,13 @@
 ###################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/college_female_athletes.csv')
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/college_female_athletes.csv')
 
 # Fitting in multiple regression model
-lin.reg <- lm(TBW ~ HGT + BF + AGE, data = data)
-lin.reg
+linReg <- lm(TBW ~ HGT + BF + AGE, data = athletes)
+linReg
 
 # To obtain confidence intervals for the regression coefficients
-round(confint(lin.reg), 1)
+confint(linReg)
 
 

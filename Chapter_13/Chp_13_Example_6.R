@@ -17,17 +17,17 @@
 #############################################################
 
 # Reading in data
-data <- read.csv(file='https://img1.wsimg.com/blobby/go/bbca5dba-4947-4587-b40a-db346c01b1b3/downloads/College_female_Athletes.csv?ver=1657874961384')
-colnames(data) #check column names
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/college_female_athletes.csv')
+colnames(athletes) #check column names
 
 # To obtain the summaries for the variables
-summary(data$TBW)
-summary(data$HGT)
-summary(data$BF)
-summary(data$AGE)
+summary(athletes$TBW)
+summary(athletes$HGT)
+summary(athletes$BF)
+summary(athletes$AGE)
 
 # Fitting in multiple regression model
-lin.reg <- lm(TBW ~ HGT + BF + AGE, data = data)
+linReg <- lm(TBW ~ HGT + BF + AGE, data = athletes)
 
 # To obtain a summary of the regression model
-summary(lin.reg)
+summary(linReg)

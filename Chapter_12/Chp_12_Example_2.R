@@ -17,9 +17,9 @@
 #################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
-colnames(data) #check column names
-attach(data) # so we can refer to variable names
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/highschool_female_athletes.csv')
+colnames(athletes) #check column names
+attach(athletes) # so we can refer to variable names
 
 # To create a scatterplot
 plot(x = BP60, y = maxBP..lbs., pch = 16, col = 'darkred',

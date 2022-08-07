@@ -17,12 +17,12 @@
 ####################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/college_female_athletes.csv')
-colnames(data) #check column names
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/college_female_athletes.csv')
+colnames(athletes) #check column names
 
 # Fitting in multiple regression models
-lin.reg <- lm(TBW ~ HGT + BF + AGE, data = data)
+linReg <- lm(TBW ~ HGT + BF + AGE, data = athletes)
 
 # To view the F-statistic, you can use the summary of the regression model
 # You will find the overall F-statistic at the last line of the summary
-summary(lin.reg)
+summary(linReg)

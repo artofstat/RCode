@@ -17,21 +17,21 @@
 ####################################
 
 # Reading in data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/college_female_athletes.csv')
-colnames(data) #check column names
+athletes <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter13/college_female_athletes.csv')
+colnames(athletes) #check column names
 
 # Fitting in multiple regression model
-lin.reg <- lm(TBW ~ HGT + BF + AGE ,data = data)
-lin.reg
+linReg <- lm(TBW ~ HGT + BF + AGE ,data = athletes)
+linReg
 
 # To get the ANOVA table for the regression model
-aov <- anova(lin.reg)
+aov <- anova(linReg)
 aov # viewing ANOVA table
 rss <- aov$`Sum Sq`[4]
-df_error <- aov$Df[4]
+dfError <- aov$Df[4]
 
 # To estimate standard deviation
-s <- sqrt(rss / df_error)
+s <- sqrt(rss / dfError)
 s
 
 

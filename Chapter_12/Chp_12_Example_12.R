@@ -17,14 +17,14 @@
 ###########################
 
 # Reading in data:
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/ga_student_survey.csv')
-colnames(data) # check column names
+students <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter12/ga_student_survey.csv')
+colnames(students) # check column names
 
 # Fitting regression model
-lin.reg <- lm(CGPA ~ HSGPA, data = data)
+linReg <- lm(CGPA ~ HSGPA, data = students)
 
 # To obtain raw residuals
-myres <- residuals(lin.reg)
+myres <- residuals(linReg)
 
 # To obtain standardized residuals
-mystdres <- rstandard(lin.reg)
+mystdres <- rstandard(linReg)
