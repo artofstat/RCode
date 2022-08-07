@@ -23,4 +23,4 @@ sodium <- c(0, 340, 70, 140, 200, 180, 210, 150, 100, 130, 140, 180, 190, 160,29
 mean(sodium)
 
 # To find the Median:
-median(sodium)
+median(sodium) 

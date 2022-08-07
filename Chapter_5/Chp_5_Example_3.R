@@ -18,4 +18,4 @@
 
 # To view the sample space for all possible outcomes of this quiz
 sampleSpace <- expand.grid(Q1 = c('C', 'I'), Q2 = c('C', 'I'), Q3 = c('C', 'I'))
-sampleSpace
+sampleSpace 

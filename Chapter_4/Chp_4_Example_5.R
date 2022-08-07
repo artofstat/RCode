@@ -21,4 +21,4 @@ sample(67, 10)
 
 # Note that `replace = FALSE` is a default argument in the `sample()` function
 # To draw with replacement, you can set `replace = TRUE`
-sample(67, 10, replace = TRUE)
+sample(67, 10, replace = TRUE) 

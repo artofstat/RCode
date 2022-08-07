@@ -29,7 +29,7 @@ addmargins(pesticide)
 pesticideRowProportions <- prop.table(pesticide, 1)
 
 # Rounding off for easier readability
-round(pesticideRowProportions, 3)
+round(pesticideRowProportions, 3) 
 
 
 
