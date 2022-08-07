@@ -17,17 +17,18 @@
 ########################
 
 # Reading in SAT data
-mean_SAT <- 500
-sd_SAT <- 100
+meanSAT <- 500
+sdSAT <- 100
 
 # To compute the z-Score of an SAT score of 650
-z_SAT <- (650 - mean_SAT) / sd_SAT
-z_SAT
+zSAT <- (650 - meanSAT) / sdSAT
+zSAT
 
 # Reading in ACT data
-mean_ACT <- 21.0
-sd_ACT <- 4.7
+meanACT <- 21.0
+sdACT <- 4.7
 
 # To compute the z-Score of an ACT score of 30
-z_ACT <- (30 - mean_ACT) / sd_ACT
-z_ACT
+zACT <- (30 - meanACT) / sdACT
+zACT
+

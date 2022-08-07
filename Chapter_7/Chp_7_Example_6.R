@@ -17,8 +17,8 @@
 #################################################################
 
 # Reading in the data:
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter7/carbon_footprint_sandwich.csv')
-attach(data) # so we can refer to variable names
+sandwiches <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter7/carbon_footprint_sandwich.csv')
+attach(sandwiches) # so we can refer to variable names
 
 # To compute the correlation coefficient between carbon footprint and energy content
 cor(EnergyContent..kCal., Carbon.footprint..g.CO2.eq..)
@@ -27,13 +27,15 @@ cor(EnergyContent..kCal., Carbon.footprint..g.CO2.eq..)
 sample(Sandwich, replace = TRUE)
 
 # To obtain a bootstrap sample of the rows of the dataframe
-data[sample(seq_len(nrow(data)), replace = TRUE), ]
+sandwiches[sample(seq_len(nrow(sandwiches)), replace = TRUE), ]
 
 # To generate 10,011 bootstrap samples and find the correlation
 bootcorr <- c() # initializing
 for (i in  1:10011) {
-  bootsample <- data[sample(seq_len(nrow(data)), replace = TRUE), ]
-  bootcorr[i] <- cor(bootsample$EnergyContent..kCal., bootsample$Carbon.footprint..g.CO2.eq..)
+  bootsample <- sandwiches[sample(seq_len(nrow(sandwiches)), 
+                                  replace = TRUE), ]
+  bootcorr[i] <- cor(bootsample$EnergyContent..kCal., 
+                     bootsample$Carbon.footprint..g.CO2.eq..)
 }
 
 # To obtain summary of the correlation coefficients from the bootstrap samples

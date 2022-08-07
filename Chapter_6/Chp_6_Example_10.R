@@ -20,6 +20,6 @@
 pnorm(90, mean = 83, sd = 5) - pnorm(80, mean = 83, sd = 5)
 
 # You can also use z-scores to compute the same percentage
-z_90 <- (90 - 83) / 5
-z_80 <- (80 - 83) / 5
-pnorm(z_90) - pnorm(z_80)
+z90 <- (90 - 83) / 5
+z80 <- (80 - 83) / 5
+pnorm(z90) - pnorm(z80)

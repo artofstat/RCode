@@ -17,25 +17,25 @@
 ######################################################
 
 # Reading in the data for the sure strategy
-gains_sure <- 500
-probs_sure <- 1
+gainsSure <- 500
+probsSure <- 1
 
 # To compute the variance
-variance_sure <- sum(((gains_sure - mean(gains_sure)) ** 2) * probs_sure)
-variance_sure
+varianceSure <- sum(((gainsSure - mean(gainsSure)) ** 2) * probsSure)
+varianceSure
 
 # To compute the standard deviation
-sqrt(variance_sure)
+sqrt(varianceSure)
 
 # Reading in the data for the risk-taking strategy
-gains_risk <- c(0, 1000)
-probs_risk <- c(0.5, 0.5)
+gainsRisk <- c(0, 1000)
+probsRisk <- c(0.5, 0.5)
 
 # To compute the variance
-variance_risk <- sum(((gains_risk - mean(gains_risk)) ** 2) * probs_risk)
-variance_risk
+varianceRisk <- sum(((gainsRisk - mean(gainsRisk)) ** 2) * probsRisk)
+varianceRisk
 
 # To compute the standard deviation
-sqrt(variance_risk)
+sqrt(varianceRisk)
 
 
