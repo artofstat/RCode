@@ -24,9 +24,10 @@ prop.test(x = 76, n = 126, p = 0.75, alternative = 'less',
 x <- 76
 n <- 126
 phat <- x / n
-p_0 <- 0.75 # the value that p takes in the null hypothesis
-se_0 <- sqrt(p_0 * (1 - p_0) / n)
-z <- (phat - p_0) / se_0
+p0 <- 0.75 # the value that p takes in the null hypothesis
+se0 <- sqrt(p0 * (1 - p0) / n)
+z <- (phat - p0) / se0
 
 # To compute the p value for a one-sided alternative hypothesis
 pnorm(z)
+

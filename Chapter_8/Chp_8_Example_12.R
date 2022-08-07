@@ -17,12 +17,12 @@
 ######################################
 
 # Reading in the data
-data <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter7/atl_departure_delay.csv')
+delays <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter7/atl_departure_delay.csv')
 
 # To make 10,000 bootstrap samples and compute median of each sample
 bootmedian <- c()
 for (i in 1:10000) {
-  bootmedian[i] <- median(sample(data$minutes, replace = TRUE))
+  bootmedian[i] <- median(sample(delays$minutes, replace = TRUE))
 }
 
 # To obtain the 2.5th and 97.5th percentiles of the bootstrapped medians

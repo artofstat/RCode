@@ -20,7 +20,7 @@
 phat <- 0.58
   
 # Setting 95% confidence level
-zscore = qnorm(0.975)
+zscore <- qnorm(0.975)
 
 # Setting the margin of error to what we need
 me <- 0.04

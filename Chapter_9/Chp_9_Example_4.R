@@ -24,9 +24,10 @@ prop.test(x = 637, n = 1353, p = 0.5, alternative = 'two.sided',
 x <- 637
 n <- 1353
 phat <- x / n
-p_0 <- 0.5 # the value that p takes in the null hypothesis
-se_0 <- sqrt(p_0 * (1 - p_0) / n)
-z <- (phat - p_0) / se_0
+p0 <- 0.5 # the value that p takes in the null hypothesis
+se0 <- sqrt(p0 * (1 - p0) / n)
+z <- (phat - p0) / se0
 
 # To compute the p value for a two-sided alternative hypothesis
 2 * pnorm(z)
+
