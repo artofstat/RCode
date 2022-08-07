@@ -23,12 +23,12 @@ rolls <- sample(6, 100, replace = TRUE)
 # To obtain the cumulative proportion of the rolls
 sixes <- rolls == 6
 frequency <- cumsum(sixes)
-cumulative_frequency <- frequency / 1:100
-cumulative_sum <- cumsum(sixes)
-cumulative_proportion <- cumulative_sum / 1:100
+cumulativeFrequency <- frequency / 1:100
+cumulativeSum <- cumsum(sixes)
+cumulativeProportion <- cumulativeSum / 1:100
 
 # Plot of the cumulative proportion of the rolls
-plot(cumulative_proportion, type = 'l',
+plot(cumulativeProportion, type = 'l',
      main = 'The Cumulative Proportion of Times a 6 Occurs, \n for a Simulation of 100 Rolls of a Fair Die',
      xlab = 'Trial Number', ylab = 'Cumulative Proportion')
 

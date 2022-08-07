@@ -26,9 +26,9 @@ plot(x = YEAR, y = ANNUAL, pch = 16, col = 'darkred',
      main = 'Average Annual Temperature in Central Park, \n New York, from 1869 - 2019')
 
 # Fitting in regression model
-lin.reg <- lm(ANNUAL ~ YEAR)
-lin.reg
+linReg <- lm(ANNUAL ~ YEAR)
+linReg
 
 # Predicting annual average temp for years 2025 and 3000
 new <- data.frame(YEAR = c(2025, 3000))
-predict(lin.reg, newdata = new)
+predict(linReg, newdata = new)

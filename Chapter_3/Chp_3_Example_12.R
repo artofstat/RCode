@@ -32,19 +32,19 @@ legend("topleft",
        col = factor(levels(factor(Gender)))) 
 
 # Separating observations for men and women
-men_observations <- subset(heights, Gender == 'Men')
-women_observations <- subset(heights, Gender == 'Women')
+menObservations <- subset(heights, Gender == 'Men')
+womenObservations <- subset(heights, Gender == 'Women')
 
 
 # Fitting in regression model for observations for men
-lm_men <- lm(Winning.Height..m. ~ Year, data = men_observations)
+lmMen <- lm(Winning.Height..m. ~ Year, data = menObservations)
 
 # Fitting in regression model for observations for men
-lm_women <- lm(Winning.Height..m. ~ Year, data = women_observations)
+lmWomen <- lm(Winning.Height..m. ~ Year, data = womenObservations)
 
 # Adding the regression equations to the plot
-abline(lm_men, col = 'black')
-abline(lm_women, col = 'red')
+abline(lmMen, col = 'black')
+abline(lmWomen, col = 'red')
 
 # Scatterplot using ggplot2
 library(ggplot2)

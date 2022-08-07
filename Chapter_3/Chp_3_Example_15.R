@@ -27,8 +27,8 @@ plot(x = education...., y = crime.rate..per.1000., pch = 16,
      ylab = 'Crimes per thousand')
 
 # Fitting in regression model and adding to plot
-lm.reg <- lm(crime.rate..per.1000. ~ education....)
-abline(lm.reg)
+linReg <- lm(crime.rate..per.1000. ~ education....)
+abline(linReg)
 
 #This adds a column of color values
 # based on the y values
@@ -38,7 +38,7 @@ plot(x = education...., y = crime.rate..per.1000., pch = 16, col = crime$Col,
      main = 'Crime and Education in 67 Florida Counties',
      xlab = 'Percent with high school education',
      ylab = 'Crimes per thousand')
-abline(lm.reg)
+abline(linReg)
 
 # Scatterplot of crime rate and percentage with at least a high school education
 # with dots colored according to the percentage of urbanization of a county
@@ -59,7 +59,7 @@ ggplot(crime, aes(x = education...., y = crime.rate..per.1000.)) +
 # Adding Urbanization variable depending on urbanization percent 
 # using `mutate()` function from the dplyr package
 library(dplyr)
-crime_new <- crime %>% 
+crimeNew <- crime %>% 
   mutate(Urbanization = case_when(urbanization.... <= 15 ~ 'rural', 
                                   urbanization.... <= 50 ~ 'mixed', 
                                   urbanization.... > 50 ~ 'urban')
@@ -67,7 +67,7 @@ crime_new <- crime %>%
 
 # Basic scatterplot crime rate and percentage with at least a high school education
 # with dots colored according to whether the county is rural, mixed, or urban
-attach(crime_new)
+attach(crimeNew)
 plot(x = education...., y = crime.rate..per.1000., pch = 16,
      col = factor(Urbanization),
      main = 'Crime and Education in 67 Florida Counties',
@@ -75,20 +75,23 @@ plot(x = education...., y = crime.rate..per.1000., pch = 16,
      ylab = 'Crimes per thousand')
 
 # Separating observations for rural, mixed, and urban counties
-rural_observations <- subset(crime_new, Urbanization == 'rural')
-mixed_observations <- subset(crime_new, Urbanization == 'mixed')
-urban_observations <- subset(crime_new, Urbanization == 'urban')
+ruralObservations <- subset(crimeNew, Urbanization == 'rural')
+mixedObservations <- subset(crimeNew, Urbanization == 'mixed')
+urbanObservations <- subset(crimeNew, Urbanization == 'urban')
 
 
 # Fitting in corresponding regression models for rural, mixed, and urban counties
-lm_rural <- lm(crime.rate..per.1000. ~ education...., data = rural_observations)
-lm_mixed <- lm(crime.rate..per.1000. ~ education...., data = mixed_observations)
-lm_urban <- lm(crime.rate..per.1000. ~ education...., data = urban_observations)
+lmRural <- lm(crime.rate..per.1000. ~ education...., 
+              data = ruralObservations)
+lmMixed <- lm(crime.rate..per.1000. ~ education...., 
+              data = mixedObservations)
+lmUrban <- lm(crime.rate..per.1000. ~ education...., 
+              data = urbanObservations)
 
 # Adding the regression equations to the plot
-abline(lm_rural, col = 'red')
-abline(lm_mixed, col = 'black')
-abline(lm_urban, col = 'green')
+abline(lmRural, col = 'red')
+abline(lmMixed, col = 'black')
+abline(lmUrban, col = 'green')
 
 
 # Using the ggplot2 package to make the same scatterplot

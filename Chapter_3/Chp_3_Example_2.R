@@ -26,10 +26,10 @@ pesticide <- matrix(counts, nrow=2, ncol=2, byrow=TRUE,
 addmargins(pesticide)
 
 # To find the conditional proportions for pesticide status (i.e. row proportions)
-pesticide_row_proportions <- prop.table(pesticide, 1)
+pesticideRowProportions <- prop.table(pesticide, 1)
 
 # Rounding off for easier readability
-round(pesticide_row_proportions, 3)
+round(pesticideRowProportions, 3)
 
 
 

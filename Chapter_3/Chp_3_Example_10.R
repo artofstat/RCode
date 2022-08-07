@@ -21,10 +21,10 @@ baseball <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/mast
 attach(baseball) # so we can refer to variable names
 
 # Fitting in regression model
-lin.reg <- lm(scoring ~ batting)
+linReg <- lm(scoring ~ batting)
 
 # Viewing model
-lin.reg
+linReg
 
 # From this model, you can obtain the regression equation:
 # Team Scoring = -2.32 + 26.07 * Batting Average
@@ -35,6 +35,6 @@ lin.reg
 
 # or you can use the `predict()` function
 new <- data.frame(batting=c(0.27))
-predict(lin.reg, newdata = new)
+predict(linReg, newdata = new)
 
 

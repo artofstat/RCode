@@ -17,16 +17,16 @@
 ################
 
 # Read in CO2 pollution values:
-eu_co2 <- read.csv(file='http://www.artofstats.com/data/chapter2/EU_CO2.csv')
-attach(eu_co2) # so we can refer to variable names
+euCO2 <- read.csv(file='https://raw.githubusercontent.com/artofstat/data/master/Chapter2/EU_CO2.csv')
+attach(euCO2) # so we can refer to variable names
 
 # To find the z-score for the CO2 value of Luxembourg
-z_score_Luxembourg <- (21.4 - mean(CO2)) / sd(CO2)
-z_score_Luxembourg
+zScoreLuxembourg <- (21.4 - mean(CO2)) / sd(CO2)
+zScoreLuxembourg
 
 # To find the z-score for the CO2 value of the United States
-z_score_US <- (16.9 - mean(CO2)) / sd(CO2)
-z_score_US
+zScoreUS <- (16.9 - mean(CO2)) / sd(CO2)
+zScoreUS
 
 # Basic Box Plot
 boxplot(CO2, horizontal = TRUE, xlab = expression('CO'[2]*' Emission per Capita (metric tons)'))

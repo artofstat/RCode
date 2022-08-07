@@ -17,5 +17,5 @@
 #####################
 
 # To view the sample space for all possible outcomes of this quiz
-sample_space <- expand.grid(Q1 = c('C', 'I'), Q2 = c('C', 'I'), Q3 = c('C', 'I'))
-sample_space
+sampleSpace <- expand.grid(Q1 = c('C', 'I'), Q2 = c('C', 'I'), Q3 = c('C', 'I'))
+sampleSpace
