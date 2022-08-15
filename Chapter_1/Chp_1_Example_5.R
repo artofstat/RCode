@@ -21,10 +21,13 @@
 
 # Now, select this .csv file from your hard drive:
 mypath <- file.choose()
+
 # Now R knows the location of your file:
 mypath
+
 # The read.csv() command reads in .csv files:
 dataEx5 <- read.csv(mypath)
+
 # We can now view the file:
 dataEx5
 
@@ -37,8 +40,10 @@ dataEx5
 # I saved it on Gitub (see www.github.com)
 
 # If you have a .csv file sitting on the internet, and you know its url (web address), you can grab it from there.
+
 # For instance, the GoogleAnalytics file sits at the following address, which I enter into R:
 myurl <- 'https://raw.githubusercontent.com/artofstat/data/master/Chapter1/GoogleAnalyticsExample5.csv'
+
 # I can now load the data into R as before, using read.csv():
 dataEx5.remote <- read.csv(myurl)
 dataEx5.remote
